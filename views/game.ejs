@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <title>Forbidden Game</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🙊</text></svg>">
+    <link rel="stylesheet" href="/assets/css/styles.css?v1">
+    <script nonce="<%= nonce %>">
+        window.server = '<%= room.gamews %>';
+        window.room = '<%= room.id %>';
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/howler@2.2.1/dist/howler.core.min.js"></script>
+    <script src="/assets/js/game-page.js?v1"></script>
+</head>
+
+<body>
+    <div id="game-area">
+        <div id="players-col">
+            <div id="team-assigned">
+                <div class="player-group team-0">
+
+                </div>
+                <div class="player-group team-1">
+
+                </div>
+            </div>
+            <div class="player-group" id="unknown-players">
+
+            </div>
+        </div>
+        <div id="main-col">
+            <div id="scoreboard" class="center">
+                <div>
+                    <span class="team-0"></span>
+                    -
+                    <span class="team-1"></span>
+                </div>
+            </div>
+            <div id="phase-0">
+                <div class="gModal">
+                    <div class="form-grid margin-bottom">
+                        <label for="playername">Name:</label>
+                        <input type="text" name="playername" id="playername" />
+                        <label>Team:</label>
+                        <div class="split-50-50">
+                            <button id="team-0-btn" value="0">Team A</button>
+                            <button id="team-1-btn" value="1">Team B</button>
+                        </div>
+                    </div>
+
+                    <div class="center">
+                        <button id="start-btn" disabled>Start</button>
+                    </div>
+                </div>
+            </div>
+            <div id="phase-1">
+                <div id="word-card">
+                    <div id="the-word"></div>
+                    <ul class="banned-words">
+                    </ul>
+                </div>
+            </div>
+            <div id="phase-2">
+                <h2><span class="playername"></span>'s Turn</h2>
+                <div>
+                    <div id="watcher-text">
+                        Make sure <span class="playername"></span> doesn't say these words:
+                        <ul class="banned-words">
+                        </ul>
+                    </div>
+                </div>
+                <div id="clues">
+
+                </div>
+            </div>
+        </div>
+        <div id="chat-col">
+            <div id="messages">
+                <div class="sticky-bottom">
+                </div>
+            </div>
+            <div id="chat-input">
+                <input type="text" id="messagetxt" />
+                <button id="sendbtn">✉️</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

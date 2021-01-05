@@ -1,0 +1,29 @@
+{
+    "cards": [
+        {
+            "word": "Rat",
+            "banned": [
+                "mouse",
+                "cheese",
+                "rodent"
+            ]
+        },
+        {
+            "word": "Worm",
+            "banned": [
+                "dirt",
+                "ground",
+                "bug"
+            ]
+        },
+        {
+            "word": "Valve Corporation",
+            "banned": [
+                "game",
+                "steam",
+                "incompetent",
+                "loot boxes"
+            ]
+        }
+    ]
+}

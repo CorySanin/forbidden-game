@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <title>Forbidden | Multiplayer Taboo-like Game</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🙊</text></svg>">
+    <link rel="stylesheet" href="/assets/css/styles.css?v1">
+    <script src="/assets/js/lobby-page.js?v1"></script>
+</head>
+
+<body>
+    <div class="content">
+        <h2>Rooms</h2>
+        <div id="rooms">
+            <div>
+                <div id="room-list">
+
+                </div>
+            </div>
+
+            <div id="create-room">
+                <div class="form-grid">
+                    <label for="room-name">Room Name:</label>
+                    <input type="text" id="room-name" name="room-name" autocomplete="off" />
+                    <label for="private-room">Private:</label>
+                    <div><input type="checkbox" id="private-room" name="private-room" /></div>
+                    <div class="grid-span-all align-right margin-bottom"><button id="create-room-btn">Create
+                            Room</button></div>
+                    <label for="room-code">Room Code:</label>
+                    <input type="text" id="room-code" name="room-code" autocomplete="off" />
+                    <div class="grid-span-all align-right margin-bottom"><button id="join-room-btn">Join Room</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

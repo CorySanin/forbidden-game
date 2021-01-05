@@ -1,0 +1,15 @@
+{
+  "name": "forbidden-game-server",
+  "version": "1.0.0",
+  "description": "Server for a Taboo-like game",
+  "main": "index.js",
+  "dependencies": {
+    "express": "4.17.1",
+    "express-ws": "4.0.0",
+    "helmet": "4.2.0",
+    "knuth-shuffle-seeded": "1.0.6",
+    "ws": "7.4.2"
+  },
+  "author": "Cory Sanin",
+  "license": "MIT"
+}

@@ -1,0 +1,6 @@
+{
+    "port": 8181,
+    "password": "changeme",
+    "lobbyUrl": "http://forbidden-web:8080",
+    "serverUrl": "http://127.0.0.1:8181"
+}

@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+   forbidden-web:
+      container_name: forbidden-web
+      build:
+         context: ./
+         dockerfile: ./Dockerfile
+      ports:
+         - 8080:8080
+      volumes:
+         - ./config:/usr/src/forbidden/config
+   
+   forbidden-server:
+      container_name: forbidden-server
+      build:
+         context: ./game-server
+         dockerfile: ./Dockerfile
+      ports:
+         - 8181:8181
+      volumes:
+         - ./game-server/config:/usr/src/forbidden-server/config
+      depends_on:
+         - forbidden-web

@@ -1,0 +1,351 @@
+$background: #CFD8DC;
+$foreground: #26A69A;
+$highlight: #80CBC4;
+
+html,
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0px;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: $background;
+    color: #000;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+.preload * {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+h1 {
+    font-size: 2.5em;
+    line-height: 1.2em;
+}
+
+h2 {
+    font-size: 1.9em;
+    line-height: 1.2em;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+h4 {
+    font-size: 1.3em;
+    line-height: 1.2em;
+}
+
+h5 {
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+h6 {
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
+
+ul,
+ol {
+    padding-left: 1.2em;
+    line-height: 1.5em;
+}
+
+li {
+    display: list-item;
+    list-style: disc;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+ol li {
+    list-style: decimal;
+}
+
+a {
+    color: $background;
+    text-decoration: underline;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+    margin-top: initial;
+}
+
+p {
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+label[title]:not([title=""]) {
+    cursor: help;
+}
+
+label.field,
+select,
+input[type="text"],
+input[type="password"],
+.buttontextinput {
+    border: 1px solid #7a7a7a;
+    padding: 1px 2px;
+    font-size: 10pt;
+    line-height: 12pt;
+
+    &.field {
+        display: flex;
+        user-select: none;
+    }
+
+    &:hover {
+        border-color: #171717;
+    }
+
+    input {
+        border: none;
+        flex-grow: 100;
+        width: 100%;
+        min-width: 5em;
+        user-select: auto;
+    }
+}
+
+textarea {
+    max-width: 100%;
+    max-height: 1080px;
+    min-height: 150px;
+    min-width: 150px;
+}
+
+textarea.noshrink {
+    min-width: 100%;
+}
+
+.buttontextinput {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+
+    input {
+        flex-grow: 2;
+        border: none;
+        margin: 0;
+    }
+
+    button {
+        background-color: $highlight;
+        color: #fff;
+        border: $foreground 2px solid;
+    }
+}
+
+iframe#video {
+    max-width: 100%;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.centerDiv {
+    margin: auto;
+}
+
+.small {
+    font-size: 0.9em;
+    font-weight: 200;
+}
+
+.big {
+    font-size: 1.2em;
+}
+
+.large {
+    font-size: 1.4em;
+    line-height: 1.5em;
+}
+
+.black {
+    color: #000;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.margin-bottom {
+    margin-bottom: 1em;
+}
+
+.float-right {
+    float: right;
+    margin-left: 0.5em;
+}
+
+.button {
+    padding: 0.25em;
+    background-color: $foreground;
+    color: #000;
+    border-radius: 0.2em;
+    border: none;
+
+    &:disabled,
+    &.disabled {
+        background-color: $highlight;
+        color: #fff;
+    }
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: 0.25em;
+    column-gap: 1em;
+    line-height: 1.5em;
+
+    label{
+        white-space: nowrap;
+    }
+}
+
+.grid-span-all {
+    grid-column: 1 / -1;
+}
+
+.content {
+    width: 80%;
+    width: calc(100% - 240pt);
+    background-color: #fff;
+    margin: auto;
+    padding: 12pt;
+
+    h1,
+    h2,
+    h3 {
+        background-color: $foreground;
+        display: inline-block;
+        padding: 0.5em 36pt;
+        position: relative;
+        right: 36pt;
+        clear: both;
+        margin-bottom: 0.25em;
+        outline: 1px dashed $highlight;
+        outline-offset: -0.1em;
+        margin-top: 18pt;
+
+        &:first-child {
+            margin-top: 24pt;
+        }
+
+        &::before {
+            display: inline-block;
+            content: "\A";
+            width: 0;
+            height: 0;
+            border: #00695C solid 12pt;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            position: absolute;
+            top: -24pt;
+            left: 0pt;
+        }
+
+        a {
+            color: inherit;
+        }
+    }
+}
+
+#navbar {
+    text-align: center;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow-x: hidden;
+
+    ul li {
+        list-style: none;
+        display: inline;
+        line-height: 4em;
+
+        a {
+            color: #fff;
+            padding: 1.3em 1.5em;
+            text-decoration: none;
+            background-image: url(../images/guzmericon.png);
+            background-size: 22px;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 4em;
+            transition: background-position 0.15s, box-shadow 0.15s;
+            transition-timing-function: cubic-bezier(0.3, 1.4, 0.7, 1.3);
+
+            &:hover,
+            &:focus {
+                background-position-y: bottom;
+                -webkit-box-shadow: inset 0px -10px 5px -10px rgba(0, 0, 0, 0.2);
+                -moz-box-shadow: inset 0px -10px 5px -10px rgba(0, 0, 0, 0.2);
+                box-shadow: inset 0px -10px 5px -10px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+#rooms {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 1em;
+    cursor: pointer;
+
+    #room-list .room {
+        background-color: #03a9f4;
+        padding: 0.5em;
+        margin: 0.5em;
+        border-radius: 0.5em;
+
+        &:hover {
+            background-color: #4fc3f7;
+        }
+        .room-name{
+            font-size: 1.5em;
+        }
+    }
+}
+
+@media screen and (max-width: 956px) {
+    .content {
+        width: 620px;
+        max-width: 80%;
+        max-width: calc(100% - 48pt);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .form-grid {
+        display: block;
+
+        & > * {
+            width: 100%;
+
+            &:nth-child(even) {
+                margin-bottom: 0.75em;
+            }
+        }
+    }
+
+    label.field.field {
+        display: block;
+    }
+}
